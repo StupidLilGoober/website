@@ -12,7 +12,7 @@ permalink: "/projects/"
 
   <p>
     <a href="https://github.com/{{ project.github }}">
-      <img src="https://img.shields.io/badge/GitHub-{{ project.github }}-gray?logo=github&logoColor=white">
+      <img src="https://img.shields.io/badge/GitHub-{{ project.badge }}-gray?logo=github&logoColor=white">
     </a>
   </p>
 
