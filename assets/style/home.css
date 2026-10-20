@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+  --primary-color: rgb(235, 235, 235);
+  --background-color: rgb(12, 12, 12);
+  --middleground-color: rgb(20, 20, 20);
+}
+
+html {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  font-family: "Open Sans";
+}
+
+#sections {
+  display: flex;
+  flex-direction: column;
+}
+
+#profile-column {
+  background-color: var(--middleground-color);
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  align-self: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+#section-lists {
+  display: flex;
+}
+
+#list {
+  background-color: var(--middleground-color);
+  padding: 15px;
+}
+
+.pfp {
+  border-radius: 100%;
+  align-self: center;
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.85));
+}
+
+.tab-button {
+  border-radius: 0px;
+  border-width: 0px;
+  background-color: var(--middleground-color);
+  font-family: "Open Sans";
+  font-size: 14px;
+  color: var(--primary-color);
+}
+
+.tab-button[data-state="selected"] {
+  border-bottom-color: var(--middleground-color);
+}
+
+.tab-button[data-state="unselected"] {
+  border-bottom-color: rgb(5, 5, 5);
+}
