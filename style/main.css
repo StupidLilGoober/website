@@ -1,0 +1,37 @@
+:root {
+  color: white;
+  background-color: rgb(20, 20, 20);
+  font-family: monospace;
+}
+
+section {
+  background-color: rgb(10, 10, 10);
+  text-align: center;
+  box-shadow: 10px 10px 10px rgba(10, 10, 10, 0.50);
+  padding: 5px;
+  border: 2px solid white;
+}
+
+#home-sections {
+  display: grid;
+  gap: 20px;
+  margin-bottom: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.invert-color {
+  filter: invert(100%);
+}
+
+a {
+  color: lightblue;
+}
+
+#navbar {
+  position: fixed;
+  right: 0px;
+  background-color: rgb(10, 10, 10);
+  padding: 5px;
+  box-shadow: 10px 10px 10px rgba(10, 10, 10, 0.50);
+  border: 2px solid white;
+}
