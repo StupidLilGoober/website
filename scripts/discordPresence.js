@@ -2,6 +2,7 @@ const USER_ID = "1246426621641101363"
 
 const lanyard_socket = new WebSocket("wss://api.lanyard.rest/socket")
 const presence_element = document.getElementById("discord-presence")
+const status = document.getElementById("status")
 
 let heartbeatinterval
 
@@ -19,7 +20,7 @@ function update_presence(data) {
       <section>
         <h2>Currently Listening To:</h2>
         <div id="spotify">
-          <img src="${spotify.album_art_url}" width="125"> <br>
+          <img src="${spotify.album_art_url}" width="125">
           <h3>${spotify.song}</h3>
           <p><em>${spotify.artist}</em></p>
         </div>
@@ -39,6 +40,8 @@ function update_presence(data) {
       </section>
     `
   }
+
+  status.src = `assets/status/${data.discord_status}.png`
 }
 
 lanyard_socket.addEventListener("message", (event) => {

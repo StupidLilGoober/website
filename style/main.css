@@ -1,7 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 :root {
   color: white;
   background-color: rgb(20, 20, 20);
-  font-family: monospace;
+  font-family: "Inter";
+  font-size: 18px;
 }
 
 section {
@@ -10,6 +24,12 @@ section {
   box-shadow: 10px 10px 10px rgba(10, 10, 10, 0.50);
   padding: 5px;
   border: 2px solid white;
+  border-radius: 5px;
+  animation: fadeIn 0.5s ease-in forwards;
+}
+
+article {
+  animation: fadeIn 0.5s ease-in forwards;
 }
 
 #home-sections {
@@ -23,8 +43,25 @@ section {
   filter: invert(100%);
 }
 
+.pfp {
+  position: relative;
+  width: 175px;
+}
+
+#pfp-image {
+  border-radius: 100%;
+}
+
+#status {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  border: 8px solid rgb(10, 10, 10);
+  border-radius: 100%;
+}
+
 a {
-  color: lightblue;
+  color: rgb(255, 255, 255);
 }
 
 #navbar {
@@ -34,4 +71,5 @@ a {
   padding: 5px;
   box-shadow: 10px 10px 10px rgba(10, 10, 10, 0.50);
   border: 2px solid white;
+  border-radius: 5px;
 }
