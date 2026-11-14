@@ -1,0 +1,17 @@
+#organization {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.post {
+  border: 2px solid white;
+  border-radius: 15px;
+  text-align: left;
+  padding: 10px;
+  margin: 5px;
+  transition: transform 0.2s ease;
+}
+
+.post:hover {
+  transform: scale(101%);
+}
