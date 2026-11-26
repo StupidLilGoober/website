@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/home.css">
+  </head>
+  <body>
+    <nav id="navbar"></nav>
+    <div align="center">
+      <img src="https://avatars.githubusercontent.com/u/216451658?v=4" width="150" class="pfp">
+      <h1>Dominic Kolp</h1>
+    </div>
+    <hr>
+    <div id="overview-organization">
+      <div>
+        <p>
+          Dominic Kolp is a C and Python programmer who enjoys video games,
+          anime, manga, programming, and writing about himself in third person.
+          He also has a cactus on his desk.
+        </p>
+        <div>
+          <a href="https://github.com/stupidlilgoober/github">GitHub</a> -
+          <a href="https://youtube.com/stupidlilgoober0">YouTube</a> -
+          <a href="https://discord.com/users/1246426621641101363">Discord</a> -
+          <a href="mailto:contact@domkolp.com">contact@domkolp.com</a>
+        </div>
+        <h2>Projects</h2>
+        <ul>
+          <li>
+            <a href="https://github.com/stupidlilgoober/chesstorss">chesstorss</a> - A
+            simple Python script that allows you to get an RSS feed of a Chess player's
+            games.
+          </li>
+        </ul>
+        <h2>Blogs</h2>
+        <ul id="list-blogs"></ul>
+      </div>
+      <div style="position: fixed; right: 5px;">
+        <pre>
+                              .... 
+                           ,;;'''';;,                    ,;;;;, 
+                 ,        ;;'      `;;,               .,;;;'   ;
+              ,;;;       ;;          `;;,';;;,.     ,%;;'     ' 
+            ,;;,;;       ;;         ,;`;;;, `;::.  %%;' 
+           ;;;,;;;       `'       ,;;; ;;,;;, `::,%%;' 
+           ;;;,;;;,          .,%%%%%'% ;;;;,;;   %;;; 
+ ,%,.      `;;;,;;;,    .,%%%%%%%%%'%; ;;;;;,;;  %;;; 
+;,`%%%%%%%%%%`;;,;;'%%%%%%%%%%%%%'%%'  `;;;;;,;, %;;; 
+;;;,`%%%%%%%%%%%,; ..`%%%%%%%%;'%%%'    `;;;;,;; %%;; 
+ `;;;;;,`%%%%%,;;/, .. `"""'',%%%%%      `;;;;;; %%;;, 
+    `;;;;;;;,;;/////,.    ,;%%%%%%%        `;;;;,`%%;; 
+           ;;;/%%%%,%///;;;';%%%%%%,          `;;;%%;;, 
+          ;;;/%%%,%%%%%/;;;';;'%%%%%,             `%%;; 
+         .;;/%%,%%%%%//;;'  ;;;'%%%%%,             %%;;, 
+         ;;//%,%%%%//;;;'   `;;;;'%%%%             `%;;; 
+         ;;//%,%//;;;;'      `;;;;'%%%              %;;;, 
+         `;;//,/;;;'          `;;;'%%'              `%;;; 
+           `;;;;'               `;'%'                `;;;; 
+                                  '      .,,,.        `;;;; 
+                                      ,;;;;;;;;;;,     `;;;; 
+                                     ;;;'    ;;;,;;,    `;;;; 
+                                     ;;;      ;;;;,;;.   `;;;; 
+                                      `;;      ;;;;;,;;   ;;;; 
+                                        `'      `;;;;,;;  ;;;; 
+                                                   `;;,;, ;;;; 
+                                                      ;;, ;;;; 
+                                                        ';;;;; 
+                                                         ;;;;; 
+                                                        .;;;;' 
+                                                       .;;;;' 
+                                                      ;;;;;' 
+                                                     ,;;;;'
+
+        </pre>
+        <p align="center">
+          <em>Ascii art found on <a href="https://www.asciiart.eu/art/bc5175b3631fbf63">www.asciiart.eu</a></em>
+        </p>
+      </div>
+    </div>
+    <script src="script/include.js"></script>
+    <script src="script/listblog.js"></script>
+    <script>
+      async function buildList() {
+        const list = await loadRSS("data/blog.rss")
+
+        list.forEach((item) => {
+          const element = 
+          `<li><a href="${item.link.replace("https://domkolp.com/", "")}">${item.title}</a> - <em>${item.pubDate}</em> - <span>${item.description}</span></li>`
+          const content = document.getElementById("list-blogs")
+          content.insertAdjacentHTML("beforeend", element)
+        })
+      }
+
+      buildList()
+    </script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+:root {
+  font-family: monospace;
+  background-color: black;
+  color: whitesmoke;
+  font-size: 14px;
+}
+
+a {
+  color: lightblue;
+  text-decoration-thickness: 1px;
+  transition: color 0.5s ease;
+}
+
+a:hover {
+  color: white;
+}
+
+.pfp {
+  border-radius: 100%;
+}
+
+nav {
+  margin-bottom: 15px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+body {
+  animation: fadeIn;
+  animation-timing-function: ease;
+  animation-duration: 1s;
+}
+
+code {
+  background-color: rgb(25, 25, 25);
+  padding: 2px;
+}

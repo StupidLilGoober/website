@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/blog.css">
+    <title>Blog</title>
+  </head>
+  <body>
+    <nav id="navbar"></nav>
+    <h1>Blog</h1>
+    <hr>
+    <div id="content">
+      
+    </div>
+    <script src="script/include.js"></script>
+    <script src="script/listblog.js"></script>
+    <script src="script/renderblog.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const blog = params.get("blog")
+
+      if (blog == null) {
+        buildList()
+      } else {
+        renderBlog(blog)
+      }
+    </script>
+  </body>
+</html>

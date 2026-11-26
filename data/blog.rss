@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Dominic Kolp's Blog</title>
+    <description>A little site where I put all of my opinions and updates.</description>
+    <link>https://domkolp.com/blog.html</link>
+    <lastBuildDate></lastBuildDate>
+    <managingEditor>contact@domkolp.com (Dominic Kolp)</managingEditor>
+
+    <item>
+      <title>Watching Godzilla: Minus Zero With My Family</title>
+      <link>https://domkolp.com/blog.html?blog=11-8-2026</link>
+      <guid isPermaLink="true">0002</guid>
+      <pubDate>11/8/2026</pubDate>
+      <description>Just talking about a fun time I had with my family.</description>
+    </item>
+    <item>
+      <title>I Used to Hate JavaScript, Now I Don't</title>
+      <link>https://domkolp.com/blog.html?blog=10-31-2026</link>
+      <guid isPermaLink="true">0001</guid>
+      <pubDate>10/31/2026</pubDate>
+      <description>Explaining why I, despite previously hating JS, now don't mind it.</description>
+    </item>
+  </channel>
+</rss>
